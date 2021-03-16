@@ -4,8 +4,6 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
-
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeComponent } from './composant/employee/employee.component';
 @NgModule({
@@ -14,13 +12,11 @@ import { EmployeeComponent } from './composant/employee/employee.component';
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
+      { path: '', component: EmployeeComponent },
     ])
   ],
   declarations: [
     AppComponent,
-    TopBarComponent,
-    ProductListComponent,
     EmployeeComponent
   ],
   bootstrap: [
