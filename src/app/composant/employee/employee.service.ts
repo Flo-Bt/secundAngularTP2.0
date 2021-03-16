@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { EmployeeComponent } from './employee.component';
+import { IEmployee } from './employee.model';
 
 const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': "application/json" } )
@@ -25,12 +26,12 @@ export class EmployeeService {
     //         tap(data=> console.log("all : " + JSON.stringify(data) ))
     //     )
     //  }  
-    listEmployee(): Observable<EmployeeComponent[]>{
-        return this.http.get<EmployeeComponent[]>(this.apiURL);
+    listEmployee(): Observable<IEmployee[]>{
+        return this.http.get<IEmployee[]>(this.apiURL);
         }
     
-    ajouterEmployee(employ : EmployeeComponent): Observable<EmployeeComponent>{
-        return this.http.post<EmployeeComponent>(this.apiURL, employ, httpOptions);
+    ajouterEmployee(employ : IEmployee): Observable<IEmployee>{
+        return this.http.post<IEmployee>(this.apiURL, employ, httpOptions);
     }
 
 

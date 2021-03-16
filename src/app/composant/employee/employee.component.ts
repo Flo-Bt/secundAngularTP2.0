@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { threadId } from 'node:worker_threads';
+import { IEmployee } from './employee.model';
 import { EmployeeService } from './employee.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { EmployeeService } from './employee.service';
 export class EmployeeComponent implements OnInit {
 
 
-employee : EmployeeComponent[];
+employee : IEmployee[];
 
 
 
