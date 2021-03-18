@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { threadId } from 'node:worker_threads';
+//import { threadId } from 'node:worker_threads';
 import { IEmployee } from './employee.model';
 import { EmployeeService } from './employee.service';
 
@@ -15,7 +15,7 @@ employee : IEmployee[];
 
 
 
-  constructor(private employeeService : EmployeeService ) {
+  constructor ( private employeeService : EmployeeService ) {
     this.employee = employeeService.listEmployee();
   }
 
